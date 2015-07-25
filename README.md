@@ -11,16 +11,16 @@ training = training[, -c(1:7)]
 ```
 
 ## Check the data
-'''
+```
 summary(training)
-'''
+```
 * There are variables that have only NA values. 
 
 ## Removing variables that have only NAs
-'''
+```
 NAcols = colSums(is.na(training)) != 0
 training = training[, !NAcols]
-'''
+```
 
 ## Read teesting data file, remove NA values, remove irrelevant variables
 ```
